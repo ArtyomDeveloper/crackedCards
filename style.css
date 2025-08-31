@@ -1,0 +1,81 @@
+body {
+    background: #3a3a3a url(https://www.transparenttextures.com/patterns/dark-noise.png);
+    color: #DDDDDD;
+    font-family: 'Droid Sans', Arial, sans-serif;
+    margin: 0;
+    font-size: 14px;
+}
+
+header {
+    background: linear-gradient(to bottom, #4a4a4a 0%, #2b2b2b 100%);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1a1a1a;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.title-container { display: flex; align-items: center; }
+.logo-img { height: 40px; width: auto; margin-right: 15px; }
+h1 { margin: 0; font-size: 1.8rem; color: #EFEFEF; text-shadow: 1px 1px 2px rgba(0,0,0,0.7); }
+
+nav .tab-link {
+    background: linear-gradient(to bottom, #555 0%, #333 100%);
+    border: 1px solid #111;
+    border-radius: 5px;
+    color: #E0E0E0;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+nav .tab-link:hover { background: linear-gradient(to bottom, #666 0%, #444 100%); }
+nav .tab-link.active { background: linear-gradient(to bottom, #3a5a7a 0%, #2a4a6a 100%); box-shadow: inset 0 1px 3px rgba(0,0,0,0.5); color: #fff; }
+
+main { padding: 1rem; }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+.table-container {
+    background: #2E2E2E;
+    border: 1px solid #222;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.05);
+    overflow-x: auto;
+}
+
+table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    white-space: nowrap;
+    border: 1px solid #444;
+}
+
+thead th {
+    background: linear-gradient(to bottom, #4f4f4f 0%, #3a3a3a 100%);
+    color: #E0E0E0;
+    font-weight: bold;
+}
+
+tbody tr { transition: background-color 0.2s; }
+tbody tr:hover { background-color: #383838; cursor: pointer; }
+
+/* Modal Styles */
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0, 0, 0, 0.7); }
+.modal-content { background: #333 url(https://www.transparenttextures.com/patterns/dark-noise.png); margin: 10vh auto; padding: 20px; border: 1px solid #111; width: 90%; max-width: 500px; border-radius: 8px; box-shadow: 0 5px 25px rgba(0,0,0,0.7); position: relative; animation: fadeIn 0.3s; }
+.close-button { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; text-shadow: 0 1px 1px #000; }
+#purchaseDetails p { margin: 6px 0; font-size: 0.9rem; }
+#purchaseDetails strong { color: #8cb8e6; min-width: 100px; display: inline-block; }
+.payment-info { margin-top: 15px; padding-top: 15px; border-top: 1px solid #444; text-align: center; }
+#qrCode { background-color: white; padding: 8px; border-radius: 8px; margin-bottom: 15px; max-width: 150px; box-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+.payment-info input { width: 90%; max-width: 380px; padding: 10px; margin: 8px 0; background-color: #2a2a2a; border: 1px solid #111; color: #ddd; border-radius: 4px; text-align: center; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5); }
+#copyButton { background: linear-gradient(to bottom, #5a8fcc 0%, #3a6fbb 100%); color: #fff; border: 1px solid #2a4f88; font-weight: bold; text-shadow: 1px 1px 1px #222; border-radius: 4px; cursor: pointer; padding: 10px 20px; display: block; margin: 10px auto 0; box-shadow: 0 1px 2px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.2); }
+
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
