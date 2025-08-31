@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crackedCards</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="title-container">
+            <img src="https://via.placeholder.com/500" alt="Logo" class="logo-img">
+            <h1>crackedCards</h1>
+        </div>
+        <nav>
+            <button class="tab-link active" data-tab="main">Main</button>
+            <button class="tab-link" data-tab="help">Help</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="main" class="tab-content active">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Subtype</th>
+                            <th>Expiry</th>
+                            <th>Name</th>
+                            <th>Country</th>
+                            <th>State</th>
+                            <th>Full Address</th>
+                            <th>ZIP</th>
+                            <th>Extra</th>
+                            <th>Place</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows will be generated from the data array in script.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="help" class="tab-content">
+            <h2>Help Section</h2>
+            <p>Welcome to crackedCards. This is the hub where CVV2 card information is listed, bought, and sold. Every entry in our database is organized by bank, card type, and country of origin, so you can quickly locate what you’re looking for—whether that’s U.S. credit cards from major banks, European debit cards, or international selections. Each listing shows the issuing bank, card level (standard, gold, platinum, etc.), and country, along with any available extras such as email, phone number, or IP address tied to the cardholder.
+
+When you make a purchase, the process is straightforward. After payment is confirmed, you will receive a downloadable .txt file that contains the complete information for the card you bought. This file includes the card number, expiration date, CVV2 code, full address, and any additional details noted in the listing. Each card is unique, and once it is sold, it is immediately removed from the marketplace to prevent duplicate sales.
+
+The site is designed to operate as simply as possible: browse the catalog, add what you need to your basket, finalize payment using the anonymous methods accepted, and retrieve your card details through your order page. Availability updates constantly, with new cards added regularly and older stock cleared out.
+        </div>
+    </main>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Purchase Summary</h2>
+            <div id="purchaseDetails"></div>
+            <div class="payment-info">
+                <h3>Payment</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=bitcoin:bc1qzh208urmyva6ml88ajlmcq3d5xf36wxu3ckx2s" alt="Bitcoin QR Code" id="qrCode">
+                <p>Please send the exact amount to the Bitcoin wallet address below.</p>
+                <input type="text" value="bc1qzh208urmyva6ml88ajlmcq3d5xf36wxu3ckx2s" readonly id="btcAddress">
+                <button id="copyButton">Copy Address</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
